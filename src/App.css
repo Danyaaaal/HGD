@@ -8,7 +8,7 @@ nav {
  font-size: 1.5rem;
   justify-content: space-between;
   align-items: center;
-  background-color: #9CA3AF;
+  background-color: #48618B;
   color: #fff;
   padding: 1rem;
 }
@@ -21,13 +21,14 @@ nav a:hover {
   text-decoration: underline;
 }
 main {
-  padding: 2rem;
-  background-color: #F0F0F0;
+  padding: 9rem;
+  background-color: white;
 }
 .footer {
-  background-color: #9CA3AF;
+  background-color: #48618B;
   color: #FFF;
   padding: 20px;
+  font-size: 1.2rem;
   text-align: center;
   position: fixed;
   bottom: 0;
