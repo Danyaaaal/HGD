@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from "react";
 // import { useState } from "react";
 // import "./ContactUs.css";
@@ -133,6 +134,14 @@
 
 
 import React, { useState } from "react";
+=======
+//
+
+import React from "react";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+>>>>>>> 6fa36100aefcdaa4d2de8b91f314210bc39752b9
 import "./ContactUs.css";
 
 function ContactUs() {
@@ -156,7 +165,12 @@ function ContactUs() {
     e.preventDefault();
     // Here you can handle form submission, e.g., sending data to backend or displaying a confirmation message
     console.log(formData);
+<<<<<<< HEAD
     alert("You message has been suvmited successfully!")
+=======
+
+    alert("submitted successfully!");
+>>>>>>> 6fa36100aefcdaa4d2de8b91f314210bc39752b9
     // You can reset the form data if needed
     setFormData({
       name: "",
@@ -229,6 +243,11 @@ localStorage.setItem("formData", JSON.stringify(formData))
         <h1></h1>
       </div>
 
+        <div className="icon">
+          <p>
+            These are our GitHub links <FontAwesomeIcon icon={faGithub} />
+          </p>
+        </div>
       <div className="github-links">
         <div>
           <a
