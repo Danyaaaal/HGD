@@ -29,7 +29,7 @@ function SpeechToText() {
     } else {
       mic.stop();
       mic.onend = () => {
-        console.log("Stopped Mic on Click");
+        console.log("Stopped Mic");
       };
     }
     mic.onstart = () => {
@@ -53,6 +53,7 @@ function SpeechToText() {
     if (savedNotes.length < 5) {
       setSavedNotes([...savedNotes, note]);
       setNote("");
+      setIsListening(false); // Stop listening when a note is saved
     } else {
       alert("You can only save up to 5 notes.");
     }
@@ -64,19 +65,19 @@ function SpeechToText() {
         <h1 className="app-title">Voice Notes</h1>
         <div className="box">
           <h2>Current Note</h2>
-          {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
+          {isListening ? <span>🛑</span> : <span>🎙️</span>}
+          <button onClick={() => setIsListening((prevState) => !prevState)}>
+            {isListening ? "Stop" : "Start"} Recording
+          </button>
           <button onClick={handleSaveNote} disabled={!note}>
             Save Note
-          </button>
-          <button onClick={() => setIsListening((prevState) => !prevState)}>
-            Start/Stop
           </button>
           <p>{note}</p>
         </div>
         <div className="box">
           <h2>Notes</h2>
           {savedNotes.map((n) => (
-            <p key={n}>{n}</p>
+            <li key={n}>{n}</li>
           ))}
         </div>
 
