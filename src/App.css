@@ -38,9 +38,9 @@ main {
   bottom: 0;
   width: 100%;
 }
-h1,
-h3 {
-  text-shadow: 2px 2px 4px #999;
+  
+h1 , h3 {
+  text-shadow: 2px 2px 4px #999; 
 }
 /* gotoapps css */
 
@@ -68,6 +68,8 @@ h3 {
 .app-icon:hover {
   transform: scale(1.1);
 }
+
+
 .home-container {
   font-size: 18px;
 }
