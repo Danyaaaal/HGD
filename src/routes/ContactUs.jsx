@@ -28,8 +28,6 @@ function ContactUs() {
 
     alert("submited sucssesfully!");
     
-    alert("submitted successfully!");
-    // You can reset the form data if needed
     setFormData({
       name: "",
       email: "",
