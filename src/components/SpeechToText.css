@@ -15,7 +15,7 @@ h1 {
     font-size: 2rem;
   }
   .container {
-    display: flex;            margin:
+    display: flex;     
     justify-content: center;
     gap: 5rem;
   }
