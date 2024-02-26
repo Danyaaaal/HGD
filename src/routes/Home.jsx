@@ -3,8 +3,10 @@ import React from "react";
 function Home() {
   return (
     <>
+    <div className="home-container">
+
       <div>
-        <h1> Welcome to our revolutionary apps</h1>
+        <h1> Welcome To Our Revolutionary Apps</h1>
         <div>
           <h3>Goal:</h3>
           <p>
@@ -41,6 +43,8 @@ function Home() {
           they communicate. Experience the future of speech and text conversion
           with our innovative suite of apps today.
         </p>
+      </div>
+
       </div>
     </>
   );

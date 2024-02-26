@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./SpeechToText.css"
+import "./SpeechToText.css";
 import { Link } from "react-router-dom";
 
 const SpeechRecognition =
@@ -50,14 +50,18 @@ function SpeechToText() {
   };
 
   const handleSaveNote = () => {
-    setSavedNotes([...savedNotes, note]);
-    setNote("");
+    if (savedNotes.length < 5) {
+      setSavedNotes([...savedNotes, note]);
+      setNote("");
+    } else {
+      alert("You can only save up to 5 notes.");
+    }
   };
 
   return (
     <>
-      <h1>Voice Notes</h1>
       <div className="container">
+        <h1 className="app-title">Voice Notes</h1>
         <div className="box">
           <h2>Current Note</h2>
           {isListening ? <span>🎙️</span> : <span>🛑🎙️</span>}
@@ -75,8 +79,19 @@ function SpeechToText() {
             <p key={n}>{n}</p>
           ))}
         </div>
+
+        <Link
+          to="/go-to-app"
+          style={{
+            textDecoration: "none",
+            color: "white",
+            fontSize: "16px",
+            fontWeight: "bold",
+          }}
+        >
+          Go To App
+        </Link>
       </div>
-      <Link to="/go-to-app">Go To App</Link>
     </>
   );
 }

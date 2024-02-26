@@ -1,14 +1,18 @@
-body, h1, h2, p {
+body,
+h1,
+h2,
+p {
   margin: 0;
   padding: 0;
 }
 nav {
   display: flex;
   flex-direction: row;
- font-size: 1.5rem;
-  justify-content: space-between;
+  font-size: 1.5rem;
+  justify-content: center;
+  gap: 10rem;
   align-items: center;
-  background-color: #48618B;
+  background-color: #48618b;
   color: #fff;
   padding: 1rem;
 }
@@ -25,12 +29,45 @@ main {
   background-color: white;
 }
 .footer {
-  background-color: #48618B;
-  color: #FFF;
+  background-color: #48618b;
+  color: #fff;
   padding: 20px;
   font-size: 1.2rem;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+h1,
+h3 {
+  text-shadow: 2px 2px 4px #999;
+}
+/* gotoapps css */
+
+.go-to-apps-container {
+  text-align: center;
+}
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.app-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15rem;
+  padding: 5rem;
+}
+.app-icons div {
+  margin: 0 10px;
+}
+.app-icon {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease;
+}
+.app-icon:hover {
+  transform: scale(1.1);
+}
+.home-container {
+  font-size: 18px;
 }

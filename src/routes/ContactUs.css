@@ -1,0 +1,78 @@
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  border-radius: 5px;
+  width: 100%;
+  margin: 8px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border: 2px solid #007bff;
+}
+
+button[type="submit"]:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.github-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem; 
+
+.github-link {
+  color: #1b1b1c; 
+  text-decoration: none; 
+}
+
+.github-link:hover {
+  color: #0056b3; 
+}
+}

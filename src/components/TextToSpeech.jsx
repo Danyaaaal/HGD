@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./TextToSpeech.css"
+import "./TextToSpeech.css";
 import { Link } from "react-router-dom";
-
 
 const TextToSpeechApp = () => {
   const [text, setText] = useState("");
@@ -25,10 +24,8 @@ const TextToSpeechApp = () => {
     return () => {
       synth.cancel();
     };
-    
   }, [text, selectedVoiceName]);
 
-    
   const handlePlay = () => {
     const synth = window.speechSynthesis;
     if (isPaused) {
@@ -54,7 +51,7 @@ const TextToSpeechApp = () => {
   };
   const handleVoiceChange = (event) => {
     const selectedVoiceName = event.target.value;
-    setSelectedVoiceName(selectedVoiceName); 
+    setSelectedVoiceName(selectedVoiceName);
   };
   const handlePitchChange = (event) => {
     setPitch(parseFloat(event.target.value));
@@ -67,9 +64,7 @@ const TextToSpeechApp = () => {
   };
   return (
     <div className="app-container">
-      <h1 className="app-title">
-        Text to Speech Converter
-      </h1>
+      <h1 className="app-title">Text to Speech Converter</h1>
       <div className="form-container">
         <div>
           <label htmlFor="voices" className="form-label">
@@ -127,22 +122,13 @@ const TextToSpeechApp = () => {
           </label>
         </div>
         <div className="button-container">
-          <button
-            onClick={handlePlay}
-            className="play-button"
-          >
+          <button onClick={handlePlay} className="play-button">
             {isPaused ? "Resume" : "Play"}
           </button>
-          <button
-            className="pause-button"
-            onClick={handlePause}
-          >
+          <button className="pause-button" onClick={handlePause}>
             Pause
           </button>
-          <button
-            onClick={handleStop}
-            className="stop-button"
-          >
+          <button onClick={handleStop} className="stop-button">
             Stop
           </button>
         </div>
@@ -156,8 +142,17 @@ const TextToSpeechApp = () => {
         required
       ></textarea>
 
-<Link to="/go-to-app">Go To App</Link>
-
+      <Link
+        to="/go-to-app"
+        style={{
+          textDecoration: "none",
+          color: "white",
+          fontSize: "16px",
+          fontWeight: "bold",
+        }}
+      >
+        Go To App
+      </Link>
     </div>
   );
 };
