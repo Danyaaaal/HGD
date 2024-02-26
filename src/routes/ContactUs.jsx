@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./ContactUs.css";
-
 function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -8,8 +10,6 @@ function ContactUs() {
     mobile: "",
     message: "",
   });
-  const [showPopup, setShowPopup] = useState(false);
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -17,12 +17,11 @@ function ContactUs() {
       [name]: value,
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you can handle form submission, e.g., sending data to backend or displaying a confirmation message
     console.log(formData);
-    alert("You message has been suvmited successfully!")
+    alert("submitted successfully!");
     // You can reset the form data if needed
     setFormData({
       name: "",
@@ -31,9 +30,6 @@ function ContactUs() {
       message: "",
     });
   };
-
-localStorage.setItem("formData", JSON.stringify(formData))
-
   return (
     <>
       <div>
@@ -90,11 +86,9 @@ localStorage.setItem("formData", JSON.stringify(formData))
           </div>
         </form>
       </div>
-
       <div>
         <h1></h1>
       </div>
-
         <div className="icon">
           <p>
             These are our GitHub links <FontAwesomeIcon icon={faGithub} />
@@ -132,5 +126,4 @@ localStorage.setItem("formData", JSON.stringify(formData))
     </>
   );
 }
-
 export default ContactUs;
