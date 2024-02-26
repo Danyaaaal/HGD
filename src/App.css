@@ -5,6 +5,18 @@ p {
   margin: 0;
   padding: 0;
 }
+
+
+.home {
+  
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  
+}
 nav {
   display: flex;
   flex-direction: row;
@@ -73,3 +85,6 @@ h1 , h3 {
 .home-container {
   font-size: 18px;
 }
+
+
+

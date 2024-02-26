@@ -8,13 +8,15 @@ function Home() {
       <div>
         <h1> Welcome To Our Revolutionary Apps</h1>
         <div>
+
+          <div className="home">  
           <h3>Goal:</h3>
           <p>
             They are designed to enhance communication experiences between the
             people especially disabled.
           </p>
         </div>
-        <div>
+        <div className="home">
           <h3>Text-to-Speech Converter:</h3>
           <p>
             It is the powerful tool that put the power ofcommunication firmly in
@@ -26,7 +28,7 @@ function Home() {
             into lifelike speech.
           </p>
         </div>
-        <div>
+        <div className="home">
           <h3>Speech-to-Text Converter:</h3>
           <p>
             Conversely, our Speech-to-Text Converter allows you to change your
@@ -38,12 +40,20 @@ function Home() {
           </p>
         </div>
         <br />
-        <p>
+
+        <div className="home">
+
+          <p>
           Join the countless individuals who have already revolutionized the way
           they communicate. Experience the future of speech and text conversion
           with our innovative suite of apps today.
         </p>
+        </div>
+        
       </div>
+            
+               </div>
+          
 
       </div>
     </>

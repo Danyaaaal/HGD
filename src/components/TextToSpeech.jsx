@@ -146,9 +146,12 @@ const TextToSpeechApp = () => {
         to="/go-to-app"
         style={{
           textDecoration: "none",
-          color: "white",
+          color: "black",
           fontSize: "16px",
           fontWeight: "bold",
+          background: "white",
+          padding: "5px",
+          borderRadius: "5px",
         }}
       >
         Go To App

@@ -53,7 +53,7 @@ function SpeechToText() {
     if (savedNotes.length < 10) {
       setSavedNotes([...savedNotes, note]);
       setNote("");
-      setIsListening(false); // Stop listening when a note is saved
+      setIsListening(false); 
     } else {
       alert("You can only save up to 10 notes.");
     }
@@ -85,11 +85,14 @@ function SpeechToText() {
           to="/go-to-app"
           style={{
             textDecoration: "none",
-            color: "white",
+            color: "black",
             fontSize: "16px",
             fontWeight: "bold",
             marginBottom: "4rem",
-          }}
+            background: "white",
+            padding: "5px",
+            borderRadius: "5px",
+            }}
         >
           Go To App
         </Link>
