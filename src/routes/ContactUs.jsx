@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import axios from "axios";
 import "./ContactUs.css";
 
 function ContactUs() {
@@ -20,19 +21,23 @@ function ContactUs() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle form submission, e.g., sending data to backend or displaying a confirmation message
-    console.log(formData);
-
-    alert("submitted successfully!");
-    // You can reset the form data if needed
-    setFormData({
-      name: "",
-      email: "",
-      mobile: "",
-      message: "",
-    });
+  
+    try {
+      const response = await axios.post("http://localhost:7000/contact", formData);
+      console.log(response.data); // Log response from the backend
+  
+      alert("Submitted successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        mobile: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (

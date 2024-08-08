@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SpeechToText.css";
+import axios from "axios"; // Import axios
 import { Link } from "react-router-dom";
 
 const SpeechRecognition =
@@ -49,13 +50,17 @@ function SpeechToText() {
     };
   };
 
-  const handleSaveNote = () => {
-    if (savedNotes.length < 10) {
+  const handleSaveNote = async () => {
+    try {
+      const response = await axios.post("http://localhost:7000/speech-to-text", { note });
+      console.log(response.data); // Log response from the backend
+
+      alert("Note saved successfully!");
       setSavedNotes([...savedNotes, note]);
       setNote("");
-      setIsListening(false); 
-    } else {
-      alert("You can only save up to 10 notes.");
+      setIsListening(false);
+    } catch (error) {
+      console.error("Error:", error);
     }
   };
 
@@ -76,8 +81,8 @@ function SpeechToText() {
         </div>
         <div className="box">
           <h2>Notes</h2>
-          {savedNotes.map((n) => (
-            <li key={n}>{n}</li>
+          {savedNotes.map((n, index) => (
+            <li key={index}>{n}</li>
           ))}
         </div>
 
@@ -102,3 +107,4 @@ function SpeechToText() {
 }
 
 export default SpeechToText;
+

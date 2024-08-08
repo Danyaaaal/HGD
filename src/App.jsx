@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import ContactForm from "./components/SignupLogin.jsx";
 import SpeechToText from "./components/SpeechToText.jsx";
 import TextToSpeech from "./components/TextToSpeech.jsx";
 import Home from "./routes/Home.jsx";
@@ -19,6 +20,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signup-login" element={<ContactForm />} />
              <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/go-to-app" element={<GoToApps/>} />
